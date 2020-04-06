@@ -592,7 +592,7 @@ function checkCookie() {
       }
       break;
     case 'summoner':
-      sawbones.classList.add('character-selected');
+      summoner.classList.add('character-selected');
       characterSelected = true;
       confirmCharacterButton.classList.remove('not-without-more-selected');
       if (perk1 === 'suchosen') {
