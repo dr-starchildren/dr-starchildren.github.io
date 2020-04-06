@@ -2373,6 +2373,8 @@ function confirmCharacter() {
       document.getElementById('sawbones-perks').classList.remove('hiding');
       flippedCard = './SB/sbBack.png';
       handSize = 10;
+      cardHand11.classList.add('hiding');
+      cardHand12.classList.add('hiding');
       var hand = document.querySelectorAll('.hand');
       var cardsToChooseFrom = document.querySelectorAll('.chooseCardsTable');
       for (var i = 0; i < cardsToChooseFrom.length; i++) {
@@ -2532,13 +2534,12 @@ function confirmCharacter() {
           health = maxHealth;
           break;
       }
-    } else if (spellweaver.classList.contains('character-selected')) {
+    } else if (summoner.classList.contains('character-selected')) {
       let characterChoice = 'Summoner';
       setCookie('character', 'summoner', 365);
       document.getElementById('summoner-perks').classList.remove('hiding');
       flippedCard = './SU/su-back.png';
       handSize = 9;
-      cardHand9.classList.add('hiding');
       cardHand10.classList.add('hiding');
       cardHand11.classList.add('hiding');
       cardHand12.classList.add('hiding');
@@ -5975,7 +5976,7 @@ suConfirmPerksButton.onclick = () => {
   if (suPerk13.classList.contains('checked')) {
     let newCard = './suPerks/suRollingFire.png';
     modDeckArray.push(newCard);
-    let newCard = './suPerks/suRollingWind.png';
+    newCard = './suPerks/suRollingWind.png';
     modDeckArray.push(newCard);
     i = modDeckArray.length;
     cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
@@ -5986,7 +5987,7 @@ suConfirmPerksButton.onclick = () => {
   if (suPerk14.classList.contains('checked')) {
     let newCard = './suPerks/suRollingDark.png';
     modDeckArray.push(newCard);
-    let newCard = './suPerks/suRollingEarth.png';
+    newCard = './suPerks/suRollingEarth.png';
     modDeckArray.push(newCard);
     i = modDeckArray.length;
     cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
