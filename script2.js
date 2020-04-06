@@ -5828,21 +5828,21 @@ for (var i = 0; i < checkboxes.length; i++) {
 
 //Summoner Perks
 let suConfirmPerksButton = document.getElementById('suConfirmPerksButton');
-let suPerk1 = document.getElementById('suRemove2minus1-1');
-let suPerk2 = document.getElementById('suRemove2minus1-2');
-let suPerk3 = document.getElementById('suReplaceminus2withwithPlus0');
-let suPerk4 = document.getElementById('suReplaceMinus1withPlus1-1');
-let suPerk5 = document.getElementById('suReplaceMinus1withPlus1-2');
-let suPerk6 = document.getElementById('suReplaceMinus1withPlus1-3');
-let suPerk7 = document.getElementById('suAddPlus2');
-let suPerk8 = document.getElementById('suAdd2RollingWound');
-let suPerk9 = document.getElementById('suAdd2RollingPoison');
-let suPerk10 = document.getElementById('suAdd2RollingHeal1-1');
-let suPerk11 = document.getElementById('suAdd2RollingHeal1-2');
-let suPerk12 = document.getElementById('suAdd2RollingHeal1-3');
-let suPerk13 = document.getElementById('suAddRollingFireAndRollingWind');
-let suPerk14 = document.getElementById('suAddRollingDarkAndRollingEarth');
-let suPerk15 = document.getElementById('suIgnoreNegEffectsAndAdd2Plus1');
+let suPerk1 = document.getElementById('suPerk1');
+let suPerk2 = document.getElementById('suPerk2');
+let suPerk3 = document.getElementById('suPerk3-1');
+let suPerk4 = document.getElementById('suPerk3-2');
+let suPerk5 = document.getElementById('suPerk3-3');
+let suPerk6 = document.getElementById('suPerk4-1');
+let suPerk7 = document.getElementById('suPerk4-2');
+let suPerk8 = document.getElementById('suPerk5');
+let suPerk9 = document.getElementById('suPerk6');
+let suPerk10 = document.getElementById('suPerk7-1');
+let suPerk11 = document.getElementById('suPerk7-2');
+let suPerk12 = document.getElementById('suPerk7-3');
+let suPerk13 = document.getElementById('suPerk8');
+let suPerk14 = document.getElementById('suPerk9');
+let suPerk15 = document.getElementById('suPerk10');
 suConfirmPerksButton.onclick = () => {
   if (suPerk1.classList.contains('checked')) {
     for (var i = 0; i < modDeckArray.length; i++) {
