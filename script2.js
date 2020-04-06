@@ -591,6 +591,56 @@ function checkCookie() {
         sbPerk15.classList.add('checked');
       }
       break;
+    case 'summoner':
+      sawbones.classList.add('character-selected');
+      characterSelected = true;
+      confirmCharacterButton.classList.remove('not-without-more-selected');
+      if (perk1 === 'suchosen') {
+        suPerk1.classList.add('checked');
+      }
+      if (perk2 === 'suchosen') {
+        suPerk2.classList.add('checked');
+      }
+      if (perk3 === 'suchosen') {
+        suPerk3.classList.add('checked');
+      }
+      if (perk4 === 'suchosen') {
+        suPerk4.classList.add('checked');
+      }
+      if (perk5 === 'suchosen') {
+        suPerk5.classList.add('checked');
+      }
+      if (perk6 === 'suchosen') {
+        suPerk6.classList.add('checked');
+      }
+      if (perk7 === 'suchosen') {
+        suPerk7.classList.add('checked');
+      }
+      if (perk8 === 'suchosen') {
+        suPerk8.classList.add('checked');
+      }
+      if (perk9 === 'suchosen') {
+        suPerk9.classList.add('checked');
+      }
+      if (perk10 === 'suchosen') {
+        suPerk10.classList.add('checked');
+      }
+      if (perk11 === 'suchosen') {
+        suPerk11.classList.add('checked');
+      }
+      if (perk12 === 'suchosen') {
+        suPerk12.classList.add('checked');
+      }
+      if (perk13 === 'suchosen') {
+        suPerk13.classList.add('checked');
+      }
+      if (perk14 === 'suchosen') {
+        suPerk14.classList.add('checked');
+      }
+      if (perk15 === 'suchosen') {
+        suPerk15.classList.add('checked');
+      }
+      break;
     default:
       characterSelected = false;
       break;
@@ -736,6 +786,7 @@ let beastTyrant = document.getElementById('beastTyrant');
 let doomStalker = document.getElementById('doomStalker');
 let nightshroud = document.getElementById('nightshroud');
 let sawbones = document.getElementById('sawbones');
+let summoner = document.getElementById('summoner');
 
 //status effects
 let poisoned = false;
@@ -803,7 +854,7 @@ function confirmCharacter() {
       let characterChoice = 'Cragheart';
       setCookie('character', 'cragheart', 365);
       document.getElementById('cragheart-perks').classList.remove('hiding');
-      flippedCard = './0002.jpg';
+      flippedCard = './CG/Crag Back.jpg';
       handSize = 11;
       cardHand12.classList.add('hiding');
       var hand = document.querySelectorAll('.hand');
@@ -969,7 +1020,7 @@ function confirmCharacter() {
       let characterChoice = 'Brute';
       setCookie('character', 'brute', 365);
       document.getElementById('brute-perks').classList.remove('hiding');
-      flippedCard = './Card Back.png';
+      flippedCard = './BT/Brute Back.png';
       handSize = 10;
       cardHand11.classList.add('hiding');
       cardHand12.classList.add('hiding');
@@ -2481,7 +2532,176 @@ function confirmCharacter() {
           health = maxHealth;
           break;
       }
-    }
+    } else if (spellweaver.classList.contains('character-selected')) {
+      let characterChoice = 'Summoner';
+      setCookie('character', 'summoner', 365);
+      document.getElementById('summoner-perks').classList.remove('hiding');
+      flippedCard = './SU/su-back.png';
+      handSize = 9;
+      cardHand9.classList.add('hiding');
+      cardHand10.classList.add('hiding');
+      cardHand11.classList.add('hiding');
+      cardHand12.classList.add('hiding');
+      var hand = document.querySelectorAll('.hand');
+      var cardsToChooseFrom = document.querySelectorAll('.chooseCardsTable');
+      for (var i = 0; i < cardsToChooseFrom.length; i++) {
+        (function() {
+          var cardToChooseFrom = cardsToChooseFrom[i];
+          if ((i > -1 && i < 12) || i > 14) {
+            cardToChooseFrom.innerHTML =
+              "<img id ='" +
+              `${cardToChooseFrom.id}` +
+              "' class = 'chooseCards " +
+              `${cardToChooseFrom.id}` +
+              "' src = './SU/su" +
+              i +
+              ".png' />";
+          } else {
+            cardToChooseFrom.innerHTML = '';
+          }
+        }.call(this, i));
+      }
+      for (var j = 0; j < hand.length; j++) {
+        (function() {
+          var handCardBack = hand[j];
+          handCardBack.src = flippedCard;
+        }.call(this, j));
+      }
+      switch (levelCount) {
+        case 1:
+          maxHealth = 8;
+          health = maxHealth;
+          var cardsToChooseFrom = document.querySelectorAll(
+            '.chooseCardsTable'
+          );
+          for (var i = 15; i < cardsToChooseFrom.length; i++) {
+            var cardToChooseFrom = cardsToChooseFrom[i];
+            cardToChooseFrom.innerHTML = '';
+          }
+          var levelTitles = document.querySelectorAll('.level');
+          for (var j = 3; j < levelTitles.length; j++) {
+            var levelTitle = levelTitles[j];
+            levelTitle.classList.add('hiding');
+          }
+          break;
+        case 2:
+          maxHealth = 9;
+          health = maxHealth;
+          var cardsToChooseFrom = document.querySelectorAll(
+            '.chooseCardsTable'
+          );
+          for (var i = 17; i < cardsToChooseFrom.length; i++) {
+            var cardToChooseFrom = cardsToChooseFrom[i];
+            cardToChooseFrom.innerHTML = '';
+          }
+          var levelTitles = document.querySelectorAll('.level');
+          for (var j = 4; j < levelTitles.length; j++) {
+            var levelTitle = levelTitles[j];
+            levelTitle.classList.add('hiding');
+          }
+          break;
+        case 3:
+          maxHealth = 11;
+          health = maxHealth;
+          var cardsToChooseFrom = document.querySelectorAll(
+            '.chooseCardsTable'
+          );
+          for (var i = 19; i < cardsToChooseFrom.length; i++) {
+            var cardToChooseFrom = cardsToChooseFrom[i];
+            cardToChooseFrom.innerHTML = '';
+          }
+          var levelTitles = document.querySelectorAll('.level');
+          for (var j = 5; j < levelTitles.length; j++) {
+            var levelTitle = levelTitles[j];
+            levelTitle.classList.add('hiding');
+          }
+          break;
+        case 4:
+          maxHealth = 12;
+          health = maxHealth;
+          var cardsToChooseFrom = document.querySelectorAll(
+            '.chooseCardsTable'
+          );
+          for (var i = 21; i < cardsToChooseFrom.length; i++) {
+            var cardToChooseFrom = cardsToChooseFrom[i];
+            cardToChooseFrom.innerHTML = '';
+          }
+          var levelTitles = document.querySelectorAll('.level');
+          for (var j = 6; j < levelTitles.length; j++) {
+            var levelTitle = levelTitles[j];
+            levelTitle.classList.add('hiding');
+          }
+          break;
+        case 5:
+          maxHealth = 14;
+          health = maxHealth;
+          var cardsToChooseFrom = document.querySelectorAll(
+            '.chooseCardsTable'
+          );
+          for (var i = 23; i < cardsToChooseFrom.length; i++) {
+            var cardToChooseFrom = cardsToChooseFrom[i];
+            cardToChooseFrom.innerHTML = '';
+          }
+          var levelTitles = document.querySelectorAll('.level');
+          for (var j = 7; j < levelTitles.length; j++) {
+            var levelTitle = levelTitles[j];
+            levelTitle.classList.add('hiding');
+          }
+          break;
+        case 6:
+          maxHealth = 15;
+          health = maxHealth;
+          var cardsToChooseFrom = document.querySelectorAll(
+            '.chooseCardsTable'
+          );
+          for (var i = 25; i < cardsToChooseFrom.length; i++) {
+            var cardToChooseFrom = cardsToChooseFrom[i];
+            cardToChooseFrom.innerHTML = '';
+          }
+          var levelTitles = document.querySelectorAll('.level');
+          for (var j = 8; j < levelTitles.length; j++) {
+            var levelTitle = levelTitles[j];
+            levelTitle.classList.add('hiding');
+          }
+          break;
+        case 7:
+          maxHealth = 17;
+          health = maxHealth;
+          var cardsToChooseFrom = document.querySelectorAll(
+            '.chooseCardsTable'
+          );
+          for (var i = 27; i < cardsToChooseFrom.length; i++) {
+            var cardToChooseFrom = cardsToChooseFrom[i];
+            cardToChooseFrom.innerHTML = '';
+          }
+          var levelTitles = document.querySelectorAll('.level');
+          for (var j = 9; j < levelTitles.length; j++) {
+            var levelTitle = levelTitles[j];
+            levelTitle.classList.add('hiding');
+          }
+          break;
+        case 8:
+          maxHealth = 18;
+          health = maxHealth;
+          var cardsToChooseFrom = document.querySelectorAll(
+            '.chooseCardsTable'
+          );
+          for (var i = 29; i < cardsToChooseFrom.length; i++) {
+            var cardToChooseFrom = cardsToChooseFrom[i];
+            cardToChooseFrom.innerHTML = '';
+          }
+          var levelTitles = document.querySelectorAll('.level');
+          for (var j = 10; j < levelTitles.length; j++) {
+            var levelTitle = levelTitles[j];
+            levelTitle.classList.add('hiding');
+          }
+          break;
+        case 9:
+          maxHealth = 20;
+          health = maxHealth;
+          break;
+      }
+    } 
     goBack.classList.remove('hiding');
     document.getElementById('select-class-section').classList.add('hiding');
     document.getElementById('level-selection').classList.add('hiding');
@@ -5605,6 +5825,189 @@ for (var i = 0; i < checkboxes.length; i++) {
     };
   }.call(this, i));
 }
+
+//Summoner Perks
+let suConfirmPerksButton = document.getElementById('suConfirmPerksButton');
+let suPerk1 = document.getElementById('suRemove2minus1-1');
+let suPerk2 = document.getElementById('suRemove2minus1-2');
+let suPerk3 = document.getElementById('suReplaceminus2withwithPlus0');
+let suPerk4 = document.getElementById('suReplaceMinus1withPlus1-1');
+let suPerk5 = document.getElementById('suReplaceMinus1withPlus1-2');
+let suPerk6 = document.getElementById('suReplaceMinus1withPlus1-3');
+let suPerk7 = document.getElementById('suAddPlus2');
+let suPerk8 = document.getElementById('suAdd2RollingWound');
+let suPerk9 = document.getElementById('suAdd2RollingPoison');
+let suPerk10 = document.getElementById('suAdd2RollingHeal1-1');
+let suPerk11 = document.getElementById('suAdd2RollingHeal1-2');
+let suPerk12 = document.getElementById('suAdd2RollingHeal1-3');
+let suPerk13 = document.getElementById('suAddRollingFireAndRollingWind');
+let suPerk14 = document.getElementById('suAddRollingDarkAndRollingEarth');
+let suPerk15 = document.getElementById('suIgnoreNegEffectsAndAdd2Plus1');
+suConfirmPerksButton.onclick = () => {
+  if (suPerk1.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod12) {
+        modDeckArray.splice(i, 2);
+        i = modDeckArray.length;
+        cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+      }
+    }
+    setCookie('perk1', 'suchosen', 365);
+  } else {
+    setCookie('perk1', 'notChosen', 365);
+  }
+  if (suPerk2.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod17) {
+        modDeckArray.splice(i, 2);
+        let newCard = './suPerks/suPlus0.png';
+        modDeckArray.push(newCard);
+      }
+    }
+    setCookie('perk2', 'suchosen', 365);
+  } else {
+    setCookie('perk2', 'notChosen', 365);
+  }
+  if (suPerk3.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod14) {
+        modDeckArray.splice(i, 2);
+        let newCard = './suPerks/suPlus1.png';
+        modDeckArray.push(newCard);
+      }
+    }
+    setCookie('perk3', 'suchosen', 365);
+  } else {
+    setCookie('perk3', 'notChosen', 365);
+  }
+  if (suPerk4.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod15) {
+        modDeckArray.splice(i, 2);
+        let newCard = './suPerks/suPlus1.png';
+        modDeckArray.push(newCard);
+      }
+    }
+    setCookie('perk4', 'suchosen', 365);
+  } else {
+    setCookie('perk4', 'notChosen', 365);
+  }
+  if (suPerk5.classList.contains('checked')) {
+    for (var i = 0; i < modDeckArray.length; i++) {
+      if (modDeckArray[i] === mod16) {
+        modDeckArray.splice(i, 2);
+        let newCard = './suPerks/suPlus1.png';
+        modDeckArray.push(newCard);
+      }
+    }
+    setCookie('perk5', 'suchosen', 365);
+  } else {
+    setCookie('perk5', 'notChosen', 365);
+  }
+  if (suPerk6.classList.contains('checked')) {
+    let newCard = './suPerks/suPlus2.png';
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk6', 'suchosen', 365);
+  } else {
+    setCookie('perk6', 'notChosen', 365);
+  }
+  if (suPerk7.classList.contains('checked')) {
+    let newCard = './suPerks/suPlus2.png';
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk7', 'suchosen', 365);
+  } else {
+    setCookie('perk7', 'notChosen', 365);
+  }
+  if (suPerk8.classList.contains('checked')) {
+    let newCard = './suPerks/suRollingWound.png';
+    modDeckArray.push(newCard);
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk8', 'suchosen', 365);
+  } else {
+    setCookie('perk8', 'notChosen', 365);
+  }
+  if (suPerk9.classList.contains('checked')) {
+    let newCard = './suPerks/suRollingPoison.png';
+    modDeckArray.push(newCard);
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk9', 'suchosen', 365);
+  } else {
+    setCookie('perk9', 'notChosen', 365);
+  }
+  if (suPerk10.classList.contains('checked')) {
+    let newCard = './suPerks/suRollingHeal1.png';
+    modDeckArray.push(newCard);
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk10', 'suchosen', 365);
+  } else {
+    setCookie('perk10', 'notChosen', 365);
+  }
+  if (suPerk11.classList.contains('checked')) {
+    let newCard = './suPerks/suRollingHeal1.png';
+    modDeckArray.push(newCard);
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk11', 'suchosen', 365);
+  } else {
+    setCookie('perk11', 'notChosen', 365);
+  }
+  if (suPerk12.classList.contains('checked')) {
+    let newCard = './suPerks/suRollingHeal1.png';
+    modDeckArray.push(newCard);
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk12', 'suchosen', 365);
+  } else {
+    setCookie('perk12', 'notChosen', 365);
+  }
+  if (suPerk13.classList.contains('checked')) {
+    let newCard = './suPerks/suRollingFire.png';
+    modDeckArray.push(newCard);
+    let newCard = './suPerks/suRollingWind.png';
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk13', 'suchosen', 365);
+  } else {
+    setCookie('perk13', 'notChosen', 365);
+  }
+  if (suPerk14.classList.contains('checked')) {
+    let newCard = './suPerks/suRollingDark.png';
+    modDeckArray.push(newCard);
+    let newCard = './suPerks/suRollingEarth.png';
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk14', 'suchosen', 365);
+  } else {
+    setCookie('perk14', 'notChosen', 365);
+  }
+  if (suPerk15.classList.contains('checked')) {
+    let newCard = './suPerks/suPlus1.png';
+    modDeckArray.push(newCard);
+    modDeckArray.push(newCard);
+    i = modDeckArray.length;
+    cardsInDeckText.innerHTML = 'Cards in Deck: ' + modDeckArray.length;
+    setCookie('perk15', 'suchosen', 365);
+  } else {
+    setCookie('perk15', 'notChosen', 365);
+  }
+  defaultDeckArray = modDeckArray.slice();
+  confirmPerks();
+};
+
 //Doomstalker Perks
 let dsConfirmPerksButton = document.getElementById('dsConfirmPerksButton');
 let dsPerk1 = document.getElementById('dsRemove2minus1-1');
