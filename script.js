@@ -5,8 +5,6 @@
 function getClassPerks() {
   let classPerks = new Array(15);
   for (i = 0; i < classPerks.length; i++) {
-    console.debug(i)
-    console.debug(document.getElementById(classPrefix + "Perk" + (i + 1)));
     classPerks[i] = document.getElementById(classPrefix + "Perk" + (i + 1));
     if (classPerks[i].classList.contains("checked"))
       setCookie("perk" + (i + 1), "chosen", 365);
@@ -136,6 +134,11 @@ function checkCookie() {
       break;
     case "summoner":
       summoner.classList.add("character-selected");
+      characterSelected = true;
+      confirmCharacterButton.classList.remove("not-without-more-selected");
+      break;
+    case "sunkeeper":
+      sunkeeper.classList.add("character-selected");
       characterSelected = true;
       confirmCharacterButton.classList.remove("not-without-more-selected");
       break;
@@ -273,20 +276,6 @@ let bearHealth = 0;
 let bearMaxHealth = 0;
 let lootCount = 0;
 
-//characters
-let brute = document.getElementById("brute");
-let cragheart = document.getElementById("cragheart");
-let mindthief = document.getElementById("mindthief");
-let spellweaver = document.getElementById("spellweaver");
-let scoundrel = document.getElementById("scoundrel");
-let tinkerer = document.getElementById("tinkerer");
-let beastTyrant = document.getElementById("beasttyrant");
-let doomStalker = document.getElementById("doomstalker");
-let nightshroud = document.getElementById("nightshroud");
-let sawbones = document.getElementById("sawbones");
-let summoner = document.getElementById("summoner");
-let summoner = document.getElementById("sunkeeper");
-
 //status effects
 let poisoned = false;
 let poisonedToken = document.getElementById("poisoned");
@@ -403,6 +392,20 @@ function customizeBasedOnLevel(){
   }
 }
 
+//characters
+let brute = document.getElementById("brute");
+let cragheart = document.getElementById("cragheart");
+let mindthief = document.getElementById("mindthief");
+let spellweaver = document.getElementById("spellweaver");
+let scoundrel = document.getElementById("scoundrel");
+let tinkerer = document.getElementById("tinkerer");
+let beastTyrant = document.getElementById("beasttyrant");
+let doomStalker = document.getElementById("doomstalker");
+let nightshroud = document.getElementById("nightshroud");
+let sawbones = document.getElementById("sawbones");
+let summoner = document.getElementById("summoner");
+let sunkeeper = document.getElementById("sunkeeper");
+
 function confirmCharacter() {
   if (characterSelected) {
     if (cragheart.classList.contains("character-selected")) {
@@ -487,7 +490,7 @@ function confirmCharacter() {
         cardHand10.classList.add("hiding");
         cardHand11.classList.add("hiding");
         cardHand12.classList.add("hiding");
-    } else if (summoner.classList.contains("character-selected")) {
+    } else if (sunkeeper.classList.contains("character-selected")) {
       characterClass="sunkeeper";
       classPrefix = "sk";
       handSize = 11;
