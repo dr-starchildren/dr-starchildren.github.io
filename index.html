@@ -19,13 +19,14 @@
           <td><img id = "tinkerer" class = "character" src = "./TI/tiProfile.png"/><br/><p class = "character-title" align = "center">Tinkerer</td>
         </tr>
         <tr>
-          <td><img id = "beastTyrant" class = "character" src = "./BT/btProfile.png"/><br/><p class = "character-title" align = "center">"Two Minis"</td>
-          <td><img id = "doomStalker" class = "character" src = "./DS/dsProfile.png"/><br/><p class = "character-title" align = "center">"Spiky Face"</td>
+          <td><img id = "beasttyrant" class = "character" src = "./BT/btProfile.png"/><br/><p class = "character-title" align = "center">"Two Minis"</td>
+          <td><img id = "doomstalker" class = "character" src = "./DS/dsProfile.png"/><br/><p class = "character-title" align = "center">"Spiky Face"</td>
           <td><img id = "nightshroud" class = "character" src = "./NS/nsProfile.png"/><br/><p class = "character-title" align = "center">"Eclipse"</td>
         </tr>
         <tr>
           <td><img id = "sawbones" class = "character" src = "./SB/sbProfile.png"/><br/><p class = "character-title" align = "center">"Saw"</td>
           <td><img id = "summoner" class = "character" src = "./SU/suProfile.png"/><br/><p class = "character-title" align = "center">"Circles"</td>
+          <td><img id = "sunkeeper" class = "character" src = "./SK/skProfile.png"/><br/><p class = "character-title" align = "center">"Sun"</td>
         </tr>
       </table>
       <div id = "level-selection" align = "center">
@@ -375,7 +376,7 @@
             <button id ="tiConfirmPerksButton" class ="button" type ="button">Confirm Perks</button>
           </div>
 
-          <div id ="beast-tyrant-perks" class ="perks hiding">
+          <div id ="beasttyrant-perks" class ="perks hiding">
             <div>
               <div id ="btPerk1" class = "checkbox btPerk">
               </div>
@@ -697,63 +698,130 @@
 
           <div id ="sawbones-perks" class ="perks hiding">
             <div>
-              <div id ="sbPerk1" class = "checkbox sbPerk">
+              <div id ="skPerk1" class = "checkbox skPerk">
               </div>
-              <div id ="sbPerk2" class = "checkbox sbPerk">
+              <div id ="skPerk2" class = "checkbox skPerk">
               </div>
               <p>Remove Two -1 Cards</p>
             </div>
             <div>
-              <div id ="sbPerk3" class = "checkbox sbPerk">
+              <div id ="skPerk3" class = "checkbox skPerk">
               </div>
               <p>Remove Four +0 Cards</p>
             </div>
             <div>
-              <div id ="sbPerk4" class = "checkbox sbPerk">
+              <div id ="skPerk4" class = "checkbox skPerk">
               </div>
-              <div id ="sbPerk5" class = "checkbox sbPerk">
+              <div id ="skPerk5" class = "checkbox skPerk">
               </div>
               <p>Replace One +0 with +2</p>
             </div>
             <div>
-              <div id ="sbPerk6" class = "checkbox sbPerk">
+              <div id ="skPerk6" class = "checkbox skPerk">
               </div>
-              <div id ="sbPerk7" class = "checkbox sbPerk">
+              <div id ="skPerk7" class = "checkbox skPerk">
               </div>
               <p>Add One Rolling +2</p>
             </div>
             <div>
-              <div id ="sbPerk8" class = "checkbox sbPerk">
+              <div id ="skPerk8" class = "checkbox skPerk">
               </div>
-              <div id ="sbPerk9" class = "checkbox sbPerk">
+              <div id ="skPerk9" class = "checkbox skPerk">
               </div>
               <p>Add One +1 Immobilize Card</p>
             </div>
             <div>
-              <div id ="sbPerk10" class = "checkbox sbPerk">
+              <div id ="skPerk10" class = "checkbox skPerk">
               </div>
-              <div id ="sbPerk11" class = "checkbox sbPerk">
+              <div id ="skPerk11" class = "checkbox skPerk">
               </div>
               <p>Add Two Rolling Wound Cards</p>
             </div>
             <div>
-              <div id ="sbPerk12" class = "checkbox sbPerk">
+              <div id ="skPerk12" class = "checkbox skPerk">
               </div>
               <p>Add One Stun Card</p>
             </div>
             <div>
-              <div id ="sbPerk13" class = "checkbox sbPerk">
+              <div id ="skPerk13" class = "checkbox skPerk">
               </div>
-              <div id ="sbPerk14" class = "checkbox sbPerk">
+              <div id ="skPerk14" class = "checkbox skPerk">
               </div>
               <p>Add One Rolling Heal +3 Cards</p>
             </div>
             <div>
-              <div id ="sbPerk15" class = "checkbox sbPerk">
+              <div id ="skPerk15" class = "checkbox skPerk">
               </div>
               <p>Add One +0 Refresh Item CardCard</p>
             </div>
-            <button id ="sbConfirmPerksButton" class ="button" type ="button">Confirm Perks</button>
+            <button id ="skConfirmPerkskutton" class ="button" type ="button">Confirm Perks</button>
+          </div>
+
+          <div id ="sunkeeper-perks" class ="perks hiding">
+            <div>
+              <div id ="skPerk1" class = "checkbox skPerk">
+              </div>
+              <div id ="skPerk2" class = "checkbox skPerk">
+              </div>
+              <p>Remove Two -1 Cards</p>
+            </div>
+            <div>
+              <div id ="skPerk3" class = "checkbox skPerk">
+              </div>
+              <p>Remove Four +0 Cards</p>
+            </div>
+            <div>
+              <div id ="skPerk4" class = "checkbox skPerk">
+              </div>
+              <p>Replace One -2 with +0</p>
+            </div>
+            <div>
+              <div id ="skPerk5" class = "checkbox skPerk">
+              </div>
+              <p>Replace +0 with +2</p>
+            </div>
+            <div>
+              <div id ="skPerk6" class = "checkbox skPerk">
+              </div>
+              <div id ="skPerk7" class = "checkbox skPerk">
+              </div>
+              <p>Add two rolling +1</p>
+            </div>
+            <div>
+              <div id ="skPerk8" class = "checkbox skPerk">
+              </div>
+              <div id ="skPerk9" class = "checkbox skPerk">
+              </div>
+              <p>Add Two Rolling Self Heal +1</p>
+            </div>
+            <div>
+              <div id ="skPerk10" class = "checkbox skPerk">
+              </div>
+              <p>Add One Rolling Stun Card</p>
+            </div>
+            <div>
+              <div id ="skPerk11" class = "checkbox skPerk">
+              </div>
+              <div id ="skPerk12" class = "checkbox skPerk">
+              </div>
+              <p>Add Two Rolling Light Cards</p>
+            </div>
+            <div>
+              <div id ="skPerk13" class = "checkbox skPerk">
+              </div>
+              <p>Add Two Rolling Shield Self 1Cards</p>
+            </div>
+            <div>
+              <div id ="skPerk14" class = "checkbox skPerk">
+              </div>
+              <p>Ignore negative item effects and add two +1 cards</p>
+            </div>
+            <div>
+              <div id ="skPerk15" class = "checkbox skPerk">
+              </div>
+              <p>Ignore negative scenario effects</p>
+            </div>
+            <button id ="skConfirmPerksButton" class ="button" type ="button">Confirm Perks</button>
           </div>
 
           <button id = "go-back1" class = "button hiding" type ="button">Go Back To Character Select</button>
